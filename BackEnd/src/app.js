@@ -4,7 +4,7 @@ const configServer = require('./config/configServer')
 const { addLogger, logger } = require('./config/logger')
 const cors = require('cors')
 
-// ---- Socket io
+// ---- Socketio
 const { Server } = require('socket.io')
 const socketProduct = require('./utils/socketProducts')
 const socketChat = require('./utils/socketChat')
