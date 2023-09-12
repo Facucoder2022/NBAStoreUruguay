@@ -16,12 +16,17 @@ export const ProductDetail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log("Submit button clicked.");
     try {
-      const res = axios.post(`/carts/${user.cart}/products/${data.payload.product._id}`)
+      console.log("Product ID to add to cart:", data.payload.product._id);
+      const res = axios.post(`carts/${user.cart}/products/${data.payload.product._id}`)
+      
         .then(result => {
+          console.log("Product added to cart successfully.");
           toast.success('Product added to cart successfully')
         })
     } catch (error) {
+      console.log("Error trying to add product to cart:", error);
       toast.success('Error trying to add product to cart')
     }
   }
@@ -48,7 +53,7 @@ export const ProductDetail = () => {
         </div>
         <div>
           <p className='text-4xl font-bold'>{data.payload.product.title}</p>
-          <p className='text-xl text-black font-semibold'>${data.payload.product.price}</p>
+          <p className='text-xl text-myLightGreen font-semibold'>${data.payload.product.price}</p>
           <span className='text-sm font-light'>About this product</span>
           <p>{data.payload.product.description}</p>
           <form onSubmit={handleSubmit}>
@@ -57,7 +62,7 @@ export const ProductDetail = () => {
                 ?
                 <button className="btn mt-2">Add to cart</button>
                 :
-                <Link className="btn mt-2" to="/login">Sign in to buy</Link>
+                <Link className="btn mt-2" to="/login">Log in to buy</Link>
             }
           </form>
           <hr className='my-4' />
