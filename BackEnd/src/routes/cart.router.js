@@ -21,9 +21,12 @@ class CartRouter extends RouterClass {
         })
 
         this.post('/:cid/products/:pid', ['USER', 'PREMIUM'], async (req, res) => {
+            console.log("La ruta está siendo accedida.");
             try{
-                res.sendSuccess(await cartController.addProductToCart(req, res))
+                console.log("Entrando al bloque try.");
+                res.sendSuccess(await cartController.addProduct(req, res))
             }catch(error){
+                console.log("Error capturado:", error);
                 res.sendServerError(error.message)
             }
         })

@@ -1,5 +1,5 @@
 const UserDto = require('../dto/user.dto')
-const { userService, cartService } = require('../services/index')
+const { userService, cartService } = require('../service/index')
 const { createHash, isValidPassword } = require('../utils/bcrypt')
 const { generateToken, generateTokenResetPassword, decodeJWT } = require('../utils/jwt')
 const CustomError = require('../utils/CustomErrors/CustomError')

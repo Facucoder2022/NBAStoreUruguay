@@ -1,4 +1,4 @@
-const { cartService, userService, productService, ticketService } = require('../services/index')
+const { cartService, userService, productService, ticketService } = require('../service')
 const transport = require('../utils/nodemailer')
 
 class CartController {
@@ -24,7 +24,7 @@ class CartController {
         }
     }
 
-    addProductToCart = async (req, res) => {
+    addProduct = async (req, res) => {
         try{
             const product = await productService.getById(req.params.pid)
 
@@ -35,8 +35,7 @@ class CartController {
             const addedProduct = await cartService.add(req.params.cid, req.params.pid)
             return addedProduct 
         }catch (error){
-            console.error(error)
-            return res.status(500).json({ status: 'error', message: 'An error occurred while adding the product to the cart' })
+            throw error
         }
     }
 
@@ -131,7 +130,7 @@ class CartController {
                 await cartService.update(cid, outOfStock)
 
                 let result = await transport.sendMail({
-                    from: 'Ticket <agustingomezdev@gmail.com>',
+                    from: 'Ticket <backendmanta2023@gmail.com>',
                     to: userEmail,
                     subject: 'Ticket',
                     html: `

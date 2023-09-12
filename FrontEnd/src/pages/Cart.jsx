@@ -76,12 +76,12 @@ export const Cart = () => {
     return (
         <div className='container mx-auto min-h-screen mt-2 px-8'>
             <Toaster position="top-right" richColors closeButton />
-            <p className='text-3xl font-bold text-myDarkBlue mb-5 text-center mx-auto mt-10'>My Shopping Cart</p>
+            <p className='text-4xl font-bold text-myDarkColor mb-5'>My cart</p>
             <CartList data={data} user={user} handleDelete={handleDelete} handleUpdate={handleUpdate} />
             <div className='mt-5'>
                 <hr />
                 <div className='flex justify-between mt-2 items-center'>
-                    <p className='text-2xl font-bold text-myBlue'>Total price: <span className='font-bold text-myBlue'>${totalPrice()}</span></p>
+                    <p>Total price: <span className='font-bold text-myLightGreen'>${totalPrice()}</span></p>
                     <button onClick={handlePurchase} className='btn'>{purchaseButtonText}</button>
                 </div>
             </div>

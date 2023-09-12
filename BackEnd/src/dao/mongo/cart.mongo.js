@@ -29,7 +29,7 @@ class CartManagerMongo{
         }
     }
 
-    async addProductToCart(cid, pid){ // cid = cartId, pid= productId
+    async addProduct(cid, pid){ // cid = cartId, pid= productId
         const cart = await cartModel.findById(cid)
         const index = cart.products.findIndex(product => product.product.toString() === pid)
         if (index === -1) { // product not found

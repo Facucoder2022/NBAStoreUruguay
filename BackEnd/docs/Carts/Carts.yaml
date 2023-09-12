@@ -187,7 +187,7 @@ components:
             type: object
           description: Populated products in cart
       example:
-        _id: 64ffaa4db837ed38679eb718
+        _id: 64c2aa17a03fc266e7e36ed6
         products: []
     Cart:
       type: Object
@@ -204,27 +204,29 @@ components:
           type: integer
           description: Quantity of products in cart
       example:
-        _id: ObjectId('64ffaa4db837ed38679eb718')
+        _id: ObjectId('649c3d1ca492b743a8d8f33b')
         products: [
           {
             product: {
                     owner: admin,
-                    _id: 64fe4b48b837ed38679eb6ec,
-                    title: Chicago Bulls - Dennis Rodmann,
-                    description: Chicago Bulls Jeresey,
+                    _id: 645e5df41a4b57a9cf70c5cc,
+                    title: Seagate Portable 2TB External Hard Drive HDD,
+                    description: Easily store and access 2TB to content on the go with the Seagate Portable Drive, a USB external hard drive,
                     thumbnails: [
-                        "https://m.media-amazon.com/images/I/81W4ZVabRxL._AC_UY741_.jpg",
-                        "https://m.media-amazon.com/images/I/71TCLeqbvWL._AC_UY550_.jpg"
+                        "https://m.media-amazon.com/images/I/81tjLksKixL.__AC_SY445_SX342_QL70_FMwebp_.jpg",
+                        "https://m.media-amazon.com/images/I/91QqR55XhQL._AC_SX679_.jpg",
+                        "https://m.media-amazon.com/images/I/91rx2KE8YGL._AC_SX679_.jpg",
+                        "https://m.media-amazon.com/images/I/918-cGeMaRL._AC_SX679_.jpg"
                     ],
-                    category: Jersey,
-                    price: 1890,
-                    stock: 50,
+                    category: electronics,
+                    price: 62,
+                    stock: 37,
                     status: true,
-                    code: CBD12345,
+                    code: D443,
                     __v: 0
                 },
                 quantity: 3,
-                _id: 64ffaa4db837ed38679eb718
+                _id: 64c2a667cc612c07f0954a0f
             },
             {
                 product: {
@@ -279,4 +281,3 @@ components:
           description: Quantity of products in cart
       example:
         quantity: 3
-         
