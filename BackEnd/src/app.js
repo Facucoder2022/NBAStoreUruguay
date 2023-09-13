@@ -34,6 +34,8 @@ const hbs = handlebars.create({
     }
 })
 
+
+
 app.set('views', __dirname+'/views')
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
@@ -43,7 +45,7 @@ app.use(express.urlencoded({extended: true}))
 app.use('/static', express.static(__dirname+'/public'))
 app.use(cookieParser())
 app.use(cors({
-    origin: ['https://tokytechfrontend.onrender.com', 'https://nba-store-uruguay.vercel.app/', 'http://localhost:5173', 'http://localhost:4173'],
+    origin: ['https://nba-store-uruguay.vercel.app/', 'http://localhost:5173'],
     credentials: true
 }))
 

@@ -16,17 +16,12 @@ export const ProductDetail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Submit button clicked.");
     try {
-      console.log("Product ID to add to cart:", data.payload.product._id);
-      const res = axios.post(`carts/${user.cart}/products/${data.payload.product._id}`)
-      
+      const res = axios.post(`/carts/${user.cart}/products/${data.payload.product._id}`)
         .then(result => {
-          console.log("Product added to cart successfully.");
           toast.success('Product added to cart successfully')
         })
     } catch (error) {
-      console.log("Error trying to add product to cart:", error);
       toast.success('Error trying to add product to cart')
     }
   }

@@ -1,4 +1,4 @@
-const { productService } = require('../service/index')
+const { productService } = require('../services/index')
 const CustomError = require('../utils/CustomErrors/CustomError')
 const EErrors = require('../utils/CustomErrors/EErrors')
 const { generateProductErrorInfo } = require('../utils/CustomErrors/info')
