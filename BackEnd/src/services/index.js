@@ -11,3 +11,5 @@ const cartService = new CartRepository(new CartDao)
 const ticketService = new TicketRepository(new TicketDao)
 
 module.exports = { userService, cartService, productService, ticketService }
+
+//pusheando de nuevo services, quedo mal ruteado en products.cotroller
