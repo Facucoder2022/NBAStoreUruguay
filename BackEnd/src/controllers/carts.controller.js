@@ -1,4 +1,4 @@
-const { cartService, userService, productService, ticketService } = require('../service')
+const { cartService, userService, productService, ticketService } = require('../services/index')
 const transport = require('../utils/nodemailer')
 
 class CartController {
