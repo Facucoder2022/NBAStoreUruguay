@@ -16,13 +16,13 @@ class ProductController {
             }
     
             let query = {}
-            if(req.query.query === undefined){ // query undefined
+            if(req.query.query === undefined){
                 query = {}
             }else if(req.query.query === 'true'){ // status === true
                 query.status = true
             }else if(req.query.query === 'false'){ // status === false
                 query.status = false
-            }else{ // category === req.query.params
+            }else{
                 query.category = req.query.query
             }
     
